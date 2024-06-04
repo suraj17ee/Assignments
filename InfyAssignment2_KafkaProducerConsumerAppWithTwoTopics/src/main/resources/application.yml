@@ -1,0 +1,33 @@
+spring:
+  application:
+    name: InfyAssignment2_KafkaProducerConsumerAppWithTwoTopics
+  kafka:
+    bootstrap-servers: localhost:9092
+    consumer:
+      auto-offset-reset: earliest
+      group-id: group_id
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+    producer:
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.apache.kafka.common.serialization.StringSerializer
+    streams:
+      application-id: streams-app  
+  main:
+    allow-bean-definition-overriding: true
+
+    
+#Steps
+#1 start zookeeper
+#2 strat kakfa server
+#3 create two topics
+#4 check for list of topics you have created
+#5 add dependencies in pom file
+#6 add properties to properties/yml file
+#7 create kafka config class and provide topics to be created
+#8 create kafka stream processror class
+#9 create kafka consumer config class
+#10 run app
+#11 open producer topic in kafka console and write a message and hit enter
+#12 check for spring boot application console for the message
+#13 now verify the same by opening consumer topic in kafka console
