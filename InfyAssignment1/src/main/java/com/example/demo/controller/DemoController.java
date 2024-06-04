@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/hello")
 public class DemoController {
 
-	ZonedDateTime dateAndDay = ZonedDateTime.now();
+	private ZonedDateTime dateAndDay = ZonedDateTime.now();
 
 	@GetMapping("whatIsToday")
 	public ResponseEntity<ZonedDateTime> getDateAndDay() {
